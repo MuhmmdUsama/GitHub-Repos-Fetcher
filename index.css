@@ -8,6 +8,20 @@ body {
   font-family: Tahoma, Arial;
 }
 
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  padding: 3rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.title-h2 {
+  color: #f44336;
+}
+
 .repos-container {
   width: 800px;
   background-color: #f6f6f6;
@@ -55,6 +69,7 @@ body {
   padding: 10px;
   margin: 5px;
   border-radius: 10px 0;
+  overflow-y: hidden;
 }
 
 .repo-box a,
@@ -62,19 +77,19 @@ body {
   float: right;
   color: #fff;
   font-size: 12px;
-  width: 70px;
+  width: 80px;
   height: 100;
   text-align: center;
   padding: 3px;
 }
 
 .repo-box a {
-    text-decoration: none;
-    background: #f44336;
-    border-radius:  0 0 10px 0;
+  text-decoration: none;
+  background: #f44336;
+  border-radius: 0 0 10px 0;
 }
 
-.repo-box span{
-    background: #009688;
-    border-radius:  10px 0 0 0;
+.repo-box span {
+  background: #009688;
+  border-radius: 10px 0 0 0;
 }
