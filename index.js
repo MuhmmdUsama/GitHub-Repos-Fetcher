@@ -12,11 +12,32 @@ function getRepos() {
     reposData.innerHTML = '<span>Please Write Github Username</span>';
   } else {
     console.log(input.value);
-    fetch('https://api.github.com/users/MuhmmdUsama/repos')
+    fetch(`https://api.github.com/users/${input.value}/repos`)
       .then((res) => res.json())
       .then((repos) => {
-        // console.log(repos);
-        reposData.innerHTML = ''
+
+        reposData.innerHTML = '';
+        repos.forEach((repo) => {
+            let repoDiv = document.createElement('div')
+            let repoName = document.createTextNode(repo.name) // Get form api
+            repoDiv.appendChild(repoName)
+
+            let repoUrl = document.createElement('a') // Repos Links
+            let repoUrlText = document.createTextNode('Visit')
+            repoUrl.appendChild(repoUrlText)
+            repoUrl.href = `https://github.com/${input.value}/${repo.name}`
+            repoUrl.target = '_blank'
+            repoDiv.appendChild(repoUrl)
+
+            let starCount = document.createElement('span')
+            let starText = document.createTextNode(`Stars ${repo.stargazers_count}`)
+            starCount.appendChild(starText)
+            repoDiv.appendChild(starCount)
+
+            repoDiv.className = 'repo-box'
+            reposData.appendChild(repoDiv)
+        });
+
       });
   }
 }
