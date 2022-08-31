@@ -16,7 +16,7 @@
 
 ## Live Demo (if available)
 
-[Start Game](https://muhmmdusama.github.io/JS-practice-proj-03-Memory-Game/)
+[Go Live](https://muhmmdusama.github.io/GitHub-Repos-Fetcher/)
 
 ## Authors
 
